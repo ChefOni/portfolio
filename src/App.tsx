@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import { AnimatePresence, motion } from 'framer-motion'
 import Lenis from 'lenis'
+import { Analytics } from '@vercel/analytics/react'
 import Navigation from './components/Navigation'
 import Sidebar from './components/Sidebar'
 import Hero from './components/Hero'
@@ -66,6 +67,7 @@ const App = () => {
       <AnimatePresence>
         {loading && <LoadingScreen key="loading" />}
       </AnimatePresence>
+      <Analytics />
     </div>
   )
 }
